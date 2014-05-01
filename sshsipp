@@ -1,0 +1,8 @@
+#!/usr/bin/expect --
+
+spawn ssh -o "ServerAliveInterval 10" -X twong@172.16.0.200
+expect "password:"
+send "zoove123\r"
+expect "twong"
+send "cd sipp.svn.200/xml_scenario\r"
+interact

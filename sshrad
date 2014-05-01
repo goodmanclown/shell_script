@@ -1,0 +1,9 @@
+#!/usr/bin/expect --
+
+set timeout 30
+spawn ssh -o "ServerAliveInterval 10" -X twong@172.16.4.83
+expect "password:"
+send "zoove123\r"
+expect "twong"
+send "cd /home/twong/rel4_7_trunk/radisys\r"
+interact

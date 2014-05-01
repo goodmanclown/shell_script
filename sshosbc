@@ -1,0 +1,8 @@
+#!/usr/bin/expect --
+
+spawn ssh -o "ServerAliveInterval 10" -X twong@172.16.0.212
+expect "password:"
+send "zoove123\r"
+expect "twong"
+#send "cd OpenSBC-1-1-5_RC4/opensipstack\r"
+interact

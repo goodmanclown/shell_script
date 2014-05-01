@@ -1,0 +1,9 @@
+#!/usr/bin/expect --
+spawn ssh -o "ServerAliveInterval 10" -X twong@172.16.0.218
+expect "password:"
+send "zoove123\r"
+expect "twong"
+send ". /home/twong/rel4_7_3_br/build/rhel4-configure\r"
+send ". /home/twong/rel4_7_3_br/sipas/env\r"
+send "cd /home/twong/rel4_7_3_br\r"
+interact

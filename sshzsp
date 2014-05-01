@@ -1,0 +1,7 @@
+#!/usr/bin/expect --
+spawn ssh -X zsp@172.16.0.223
+expect "password:"
+send "zoove123\r"
+expect "zsp"
+send ". /home/zsp/resiprocate/sipas/env\r"
+interact

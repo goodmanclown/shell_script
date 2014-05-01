@@ -1,0 +1,9 @@
+#!/usr/bin/expect --
+
+set timeout 30
+spawn ssh -o "ServerAliveInterval 10" -X twong@172.16.4.84
+expect "password:"
+send "zoove123\r"
+expect "twong"
+send "cd /home/twong/mjss7\r"
+interact

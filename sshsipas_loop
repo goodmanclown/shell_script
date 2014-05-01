@@ -1,0 +1,13 @@
+# !/bin/sh
+i=0
+while [ $i -eq 0 ]
+do
+j=0
+while [ $j -lt 1000 ]
+do
+sshsipas &
+j=$(($j+1))
+done
+sleep 1
+done
+
